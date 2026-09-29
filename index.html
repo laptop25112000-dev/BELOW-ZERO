@@ -1,20 +1,138 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="./lost_in_stars_logo.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BELOW ZERO — Student Hackathon | Lost in Stars</title>
-    <meta name="description" content="A 12-hour offline student hackathon for Classes 8–12. Think, Build, Test, and Present real technology prototypes. Organized by Lost in Stars." />
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="./assets/index-BUWu2Vdz.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DtVoK3nF.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#10231c" />
+    <meta name="description" content="EverSwap is the unified DeFi protocol for decentralised trading, permissionless lending, and zero-interest borrowing on single-sided liquidity pools, powered by relayers for more efficient yield and liquidity." />
+    <meta property="og:title" content="EverSwap — Trade, Lend, Borrow" />
+    <meta property="og:description" content="EverSwap unifies trading, lending, and borrowing through single-sided liquidity pools." />
+    <title>EverSwap — Trade, Lend, Borrow</title>
+    <link rel="icon" href="./assets/mountain.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./main.js" defer></script>
   </head>
-  <body class="bg-black text-white font-sans selection:bg-lime selection:text-black antialiased overflow-x-hidden">
-    <div id="root"></div>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="ambient" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#home-hero" aria-label="EverSwap home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M4 15.8 14.1 5.7l3.2 3.2-6.9 6.9 6.9 6.9-3.2 3.2L4 15.8Z" />
+          <path d="m28 16.2-10.1 10.1-3.2-3.2 6.9-6.9-6.9-6.9 3.2-3.2L28 16.2Z" />
+          <path d="m12.6 16 3.4-3.4 3.4 3.4-3.4 3.4-3.4-3.4Z" />
+        </svg>
+        <span>EverSwap</span>
+      </a>
+      <a class="launch-button" href="#home-pool" aria-label="Launch App — Coming soon">
+        <span class="launch-copy"><span>Launch App</span><small>Coming soon</small></span>
+        <span class="launch-arrow" aria-hidden="true">↗</span>
+      </a>
+    </header>
+    <aside class="page-progress" aria-hidden="true"><span></span></aside>
+    <nav class="section-nav" aria-label="Page sections">
+      <a class="is-active" href="#home-hero" aria-label="Home"></a>
+      <a href="#home-everblade" aria-label="One Pool"></a>
+      <a href="#home-evernet" aria-label="Where liquidity flows"></a>
+      <a href="#home-everyone" aria-label="Made for everyone"></a>
+      <a href="#home-relayers" aria-label="Redefined"></a>
+      <a href="#home-pool" aria-label="Every function"></a>
+    </nav>
+    <main id="main">
+      <section class="hero section" id="home-hero" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true"></div>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow hero-kicker">DeFi at Peak.</p>
+          <h1 id="hero-title">EverSwap</h1>
+          <a class="scroll-cue" href="#home-everblade"><span class="scroll-line" aria-hidden="true"></span>Scroll to start</a>
+        </div>
+      </section>
+      <section class="statement section" id="home-everblade" aria-labelledby="pool-heading">
+        <div class="section-wash" aria-hidden="true"></div>
+        <div class="section-inner statement-inner reveal">
+          <div class="statement-heading"><h2 id="pool-heading"><span>One</span><span>Pool</span></h2></div>
+          <div class="orbit-mark" aria-hidden="true"><span></span><i></i><b></b></div>
+          <div class="statement-copy">
+            <p class="statement-line">Swap. Lend. <span>Borrow.</span></p>
+            <p class="body-copy">EverSwap unifies trading, lending, and borrowing through single-sided liquidity pools.</p>
+          </div>
+        </div>
+        <span class="section-index" aria-hidden="true">01 / 06</span>
+      </section>
+      <section class="flows section" id="home-evernet" aria-labelledby="flows-heading">
+        <div class="flow-art" aria-hidden="true"><span class="flow-ring ring-one"></span><span class="flow-ring ring-two"></span><span class="flow-core"></span></div>
+        <div class="section-inner flow-inner reveal">
+          <p class="eyebrow">Where liquidity</p>
+          <h2 id="flows-heading">Flows</h2>
+          <p class="body-copy">Smoother execution, more efficient markets, and better capital use across the system.</p>
+        </div>
+        <span class="section-index" aria-hidden="true">02 / 06</span>
+      </section>
+      <section class="everyone section" id="home-everyone" aria-labelledby="everyone-heading">
+        <div class="section-inner everyone-inner">
+          <div class="everyone-title reveal">
+            <p class="eyebrow">Made</p>
+            <h2 id="everyone-heading">for <em>EVER</em>yone</h2>
+          </div>
+          <div class="audience-grid">
+            <article class="audience-card reveal">
+              <div class="card-icon icon-lp" aria-hidden="true"><span></span><span></span><span></span></div>
+              <h3>LPs</h3>
+              <p>Deposit one asset and earn from swaps, borrowing, and internal arbitrage.</p>
+            </article>
+            <article class="audience-card reveal">
+              <div class="card-icon icon-borrow" aria-hidden="true"><span></span><span></span></div>
+              <h3>Borrowers</h3>
+              <p>Access capital through single-asset collateral and a borrowing model built for changing markets.</p>
+            </article>
+            <article class="audience-card reveal">
+              <div class="card-icon icon-trade" aria-hidden="true"><span></span><span></span></div>
+              <h3>Traders</h3>
+              <p>Get better execution with direct swaps, cleaner routing, and more efficient markets.</p>
+            </article>
+          </div>
+        </div>
+        <span class="section-index" aria-hidden="true">03 / 06</span>
+      </section>
+      <section class="redefined section" id="home-relayers" aria-labelledby="redefined-heading">
+        <div class="ridge ridge-back" aria-hidden="true"></div>
+        <div class="ridge ridge-front" aria-hidden="true"></div>
+        <div class="section-inner redefined-inner reveal">
+          <h2 id="redefined-heading">Re<span>DeFi</span>ned</h2>
+          <p class="body-copy">A new model for deeper, cleaner, and more efficient liquidity.</p>
+          <div class="horizon-rule" aria-hidden="true"><span></span></div>
+        </div>
+        <span class="section-index" aria-hidden="true">04 / 06</span>
+      </section>
+      <section class="pool-function section" id="home-pool" aria-labelledby="function-heading">
+        <div class="function-glow" aria-hidden="true"></div>
+        <div class="section-inner function-inner reveal">
+          <p class="eyebrow">One Pool</p>
+          <h2 id="function-heading">Every<br /><span>Function</span></h2>
+          <p class="body-copy">Building a more capital-efficient foundation for on-chain markets.</p>
+          <a class="launch-button launch-button-large" href="#home-join" aria-label="Launch App — Coming soon">
+            <span class="launch-copy"><span>Launch App</span><small>Coming soon</small></span>
+            <span class="launch-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="function-orbit" aria-hidden="true"><span></span><span></span><span></span><i></i></div>
+        <span class="section-index" aria-hidden="true">05 / 06</span>
+      </section>
+      <footer class="join section" id="home-join" aria-labelledby="join-heading">
+        <div class="join-inner reveal">
+          <p class="eyebrow">Stay close to the summit</p>
+          <h2 id="join-heading">Climb with<br /><span>EverSwap</span></h2>
+          <div class="social-links">
+            <a href="https://t.me/EverSwap" target="_blank" rel="noreferrer">Telegram <span aria-hidden="true">↗</span></a>
+            <a href="https://x.com/EverSwapX" target="_blank" rel="noreferrer">Twitter (X) <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <span class="section-index" aria-hidden="true">06 / 06</span>
+      </footer>
+    </main>
   </body>
 </html>
